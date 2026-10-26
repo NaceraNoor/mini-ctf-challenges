@@ -1,0 +1,19 @@
+Difficulty: easy
+Category: cryptography
+Theme: nonce reuse in AES-GCM
+
+Description: 
+AES-GCM uses a nonce for each key to encrypt messages. Due to a bad management of the nonce, 2 messages got encrypted with the same key and the same nonce, so they share the same keystream.
+C1 is the encryption of M1 and C2 is the encryption of M2. 
+Luckily, M1 got leaked. Can you find M2 ? 
+You can find M1, C1, C2 in the file dist/challenge.txt
+
+flag: shellmates{3714c5dd98339b87646451e3}
+
+hints:
+- The data is encoded in utf-8 before encryption and C1 and C2 are hex-encoded.
+- This is how AES-GCM encrypts data: C1 = M1 XOR keystream , C2 = M2 XOR keystream
+- The inverse operation of XOR is XOR itself.
+
+files: dist/challenge.txt
+setup: static file, no setup needed.
