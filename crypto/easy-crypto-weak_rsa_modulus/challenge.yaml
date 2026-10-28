@@ -15,4 +15,4 @@ hints:
 - The AES version used is AES-CTR. You can use the Python AES library such as Crypto.
 
 files: dist/data.txt
-setup: static file, requires installing Crypto module.
+setup: static file, no setup needed.
