@@ -1,0 +1,18 @@
+Difficulty: easy
+Category: cryptography
+Theme: small modulus in RSA
+
+Description: 
+A web server is using hybrid encryption to communicate with its client: RSA for encrypting the AES key and then AES for encrypting the data. Here is the RSA public key of the website (e, some weak n). We intercepted the encrypted key and encrypted data. Can you decipher the key and get the plain data ?
+You can find the public RSA key, the encrypted key, nonce and encrypted data in: dist/data.txt
+Format: The numbers n, e and the AES key are decimal integers. The nonce and the encrypted data are hex encoded. Don't forget to encode the plain data to utf-8.
+
+flag: shellmates{4026bf0d37f12ea1a2de147a4e3b2f0a}
+
+hints:
+- Isn't the n of the public key quite small ?
+- Here's a useful tool to factor a number into two primes: https://www.alpertron.com.ar/ECM.HTM
+- The AES version used is AES-CTR. You can use the Python AES library such as Crypto.
+
+files: dist/data.txt
+setup: static file, requires installing Crypto module.
