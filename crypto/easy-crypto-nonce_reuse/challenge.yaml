@@ -16,4 +16,4 @@ hints:
 - The inverse operation of XOR is XOR itself.
 
 files: dist/challenge.txt
-setup: static file, no setup needed.
+setup: static file, requires installing cryptography module.

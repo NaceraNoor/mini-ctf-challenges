@@ -1,7 +1,7 @@
 # crypto-easy-reuse
 
 **Category:** Crypto | **Difficulty:** easy
-**Flag:** `shellmates{...}`
+**Flag:** `shellmates{3714c5dd98339b87646451e3}`
 
 ## Challenge
 Two messages were encrypted with AES-GCM using the same key and the same
