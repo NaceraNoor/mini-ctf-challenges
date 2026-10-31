@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main>
+  <h1>Register</h1>
+  {% if error %}<p style="color:red;">{{ error }}</p>{% endif %}
+  <form method="post">
+    <label>Username</label><br>
+    <input type="text" name="username" required><br>
+    <label>Password</label><br>
+    <input type="password" name="password" required><br>
+    <div style="display: flex; gap: 10px;">
+      <button type="submit">Register</button>
+      <a href="{{ url_for('login') }}" class="btn-link">Login</a>
+    </div>
+  </form>
+  </main>
+</body>
+</html>

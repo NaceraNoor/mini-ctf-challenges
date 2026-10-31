@@ -1,0 +1,21 @@
+Difficulty: very easy
+Category: web
+Theme: leaked sessions 
+
+Description: 
+ session ID is what keeps you logged in during your session. This website
+  relies on this session mechanic, but it has a vulnerability. Can you find it?
+
+flag: shellmates{9571c5bd902f38d46662cdd2fb}
+
+hints:
+  - What do the displayed details represent when you click the "Session Info" button on your profile?
+  - Try right-clicking the page and selecting "Inspect", then go to the Application tab, and look at Cookies.
+  - Can you find a way to access the admin's profile page?
+
+files: []
+setup: |
+  Build and run with Docker:
+    docker build -t leaked-sessions .
+    docker run -p 5055:5055 leaked-sessions
+  The app will then be available at http://localhost:5055
