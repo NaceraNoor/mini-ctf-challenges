@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <title>Login Infos</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main>
+  <h1>Login Infos</h1>
+  <p>For your convenience, here are all currently active sessions:</p>
+
+  <table border="1" cellpadding="6">
+    <tr>
+      <th>Username</th>
+      <th>Session ID</th>
+    </tr>
+    {% for s in sessions %}
+    <tr>
+      <td>{{ s.username }}</td>
+      <td>{{ s.session_id }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <p><a href="{{ url_for('index') }}">Back to profile</a></p>
+  </main>
+</body>
+</html>
